@@ -1,0 +1,669 @@
+/* =========================================================
+   FarmHelper Dashboard Styling (Agricultural Green Theme)
+   ========================================================= */
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f7faf8;
+}
+
+/* Main Area */
+.dashboard-main {
+  flex: 1;
+  padding: 32px 36px;
+  overflow-y: auto;
+  max-width: 1400px;
+}
+
+/* =========================================================
+   Dashboard Header
+   ========================================================= */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  gap: 20px;
+}
+
+.header-greeting-container {
+  max-width: 650px;
+}
+
+.current-date-badge {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #15803d;
+  background: #dcfce7;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.welcome-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #14532d;
+  letter-spacing: -0.6px;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.welcome-description {
+  font-size: 14.5px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.header-farm-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-healthy {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  background: #16a34a;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #16a34a;
+}
+
+.farm-location-label {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* =========================================================
+   Highlights Bar
+   ========================================================= */
+.highlights-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  background: #ffffff;
+  padding: 16px 20px;
+  border-radius: var(--radius-lg);
+  border: 1px solid #e5e7eb;
+  margin-bottom: 28px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.highlight-pill {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.highlight-label {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.highlight-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.text-green {
+  color: #15803d;
+}
+
+.text-amber {
+  color: #d97706;
+}
+
+/* =========================================================
+   Dashboard Grid & Cards
+   ========================================================= */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 24px;
+}
+
+.dash-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid #e5e7eb;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.dash-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -3px rgba(21, 128, 61, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  border-color: #bbf7d0;
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-title-group h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.card-badge {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.bg-blue { background: #eff6ff; color: #1d4ed8; }
+.bg-green { background: #f0fdf4; color: #15803d; }
+.bg-teal { background: #f0fdfa; color: #0f766e; }
+.bg-amber { background: #fefce8; color: #b45309; }
+.bg-rose { background: #fff1f2; color: #be123c; }
+.bg-emerald { background: #ecfdf5; color: #047857; }
+
+.card-top-indicator {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4b5563;
+  background: #f3f4f6;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.confidence-pill {
+  font-size: 12px;
+  font-weight: 700;
+  color: #15803d;
+  background: #dcfce7;
+  padding: 3px 9px;
+  border-radius: 20px;
+}
+
+.due-pill {
+  font-size: 12px;
+  font-weight: 700;
+  color: #b45309;
+  background: #fef3c7;
+  padding: 3px 9px;
+  border-radius: 20px;
+}
+
+.live-pill {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #047857;
+  background: #d1fae5;
+  padding: 3px 9px;
+  border-radius: 20px;
+}
+
+/* Card Tip Box */
+.card-tip-box {
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.tip-green { background: #f0fdf4; color: #166534; border: 1px solid #dcfce7; }
+.tip-blue { background: #eff6ff; color: #1e40af; border: 1px solid #dbeafe; }
+.tip-teal { background: #f0fdfa; color: #115e59; border: 1px solid #ccfbf1; }
+.tip-amber { background: #fffbeb; color: #92400e; border: 1px solid #fef3c7; }
+.tip-rose { background: #fff1f2; color: #9f1239; border: 1px solid #ffe4e6; }
+
+/* Card Action Button */
+.card-action-btn {
+  width: 100%;
+  padding: 10px 14px;
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease;
+  display: block;
+}
+
+.card-action-btn:hover {
+  background: #15803d;
+  color: #ffffff;
+  border-color: #15803d;
+}
+
+/* Weather Card Specifics */
+.weather-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.weather-temp-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.temp-value {
+  font-size: 34px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1;
+}
+
+.temp-sub {
+  font-size: 12.5px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.weather-icon-large {
+  font-size: 40px;
+}
+
+.weather-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.weather-metric {
+  background: #f9fafb;
+  padding: 8px 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.metric-val {
+  font-size: 13px;
+  color: #111827;
+}
+
+/* Crop Card Specifics */
+.crop-spotlight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.crop-avatar {
+  font-size: 32px;
+}
+
+.crop-info h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 3px 0;
+}
+
+.crop-info p {
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.card-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.stat-box {
+  background: #f9fafb;
+  padding: 8px 6px;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-label {
+  font-size: 10.5px;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+.stat-val {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* Irrigation Card Specifics */
+.schedule-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f0fdfa;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccfbf1;
+}
+
+.next-time {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.time-sub {
+  font-size: 11px;
+  color: #0f766e;
+  font-weight: 600;
+}
+
+.time-val {
+  font-size: 16px;
+  font-weight: 700;
+  color: #134e4a;
+}
+
+.method-tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0f766e;
+  background: #ffffff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #99f6e4;
+}
+
+.irrigation-indicators {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progress-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.progress-track {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #0d9488;
+  border-radius: 4px;
+}
+
+.irrigation-meta {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Fertilizer Card Specifics */
+.fertilizer-item-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fefce8;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #fef08a;
+}
+
+.fert-icon {
+  font-size: 28px;
+}
+
+.fert-text h4 {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #713f12;
+  margin: 0 0 3px;
+}
+
+.fert-text p {
+  font-size: 12px;
+  color: #854d0e;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.dosage-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.dosage-item {
+  background: #f9fafb;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.d-label {
+  font-size: 10.5px;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+.d-val {
+  font-size: 12.5px;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+/* Pest Control Specifics */
+.pest-warning-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff1f2;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ffe4e6;
+}
+
+.pest-icon {
+  font-size: 24px;
+}
+
+.pest-info h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #9f1239;
+  margin: 0 0 2px;
+}
+
+.pest-info p {
+  font-size: 12px;
+  color: #be123c;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.treatment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.treatment-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #374151;
+}
+
+.step-num {
+  width: 20px;
+  height: 20px;
+  background: #fee2e2;
+  color: #991b1b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Market Prices Specifics */
+.market-prices-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.market-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.commodity-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comm-icon {
+  font-size: 20px;
+}
+
+.commodity-name strong {
+  display: block;
+  font-size: 13.5px;
+  color: #1f2937;
+}
+
+.comm-mandi {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.commodity-price {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.price-val {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.price-trend {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.price-trend.up {
+  color: #16a34a;
+}
+
+.price-trend.steady {
+  color: #6b7280;
+}
+
+/* =========================================================
+   Responsive Design
+   ========================================================= */
+@media (max-width: 900px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .dashboard-main {
+    padding: 20px 16px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-farm-status {
+    align-items: flex-start;
+  }
+
+  .welcome-title {
+    font-size: 24px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}

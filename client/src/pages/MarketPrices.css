@@ -1,0 +1,716 @@
+/* =========================================================
+   FarmHelper Market Prices Page Styles (Agricultural Green Theme)
+   ========================================================= */
+
+.market-page-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f7faf8;
+}
+
+.market-main-content {
+  flex: 1;
+  padding: 32px 36px;
+  overflow-y: auto;
+  max-width: 1440px;
+}
+
+/* =========================================================
+   Header Section
+   ========================================================= */
+.market-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header-text-group {
+  max-width: 680px;
+}
+
+.market-crumb {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #15803d;
+  background: #dcfce7;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.market-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #14532d;
+  letter-spacing: -0.6px;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.market-subtitle {
+  font-size: 14.5px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.sample-badge-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #bbf7d0;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #15803d;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.sample-badge-dot {
+  width: 8px;
+  height: 8px;
+  background: #16a34a;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(22, 163, 74, 0.6);
+}
+
+/* =========================================================
+   Disclaimer Banner
+   ========================================================= */
+.market-disclaimer-banner {
+  background: #fffbeb;
+  border: 1.5px solid #fde68a;
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.disclaimer-icon {
+  font-size: 24px;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+.disclaimer-text strong {
+  display: block;
+  font-size: 13.5px;
+  color: #92400e;
+  margin-bottom: 4px;
+}
+
+.disclaimer-text p {
+  font-size: 12.5px;
+  color: #78350f;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* =========================================================
+   Search & Filter Section
+   ========================================================= */
+.market-filter-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-xl);
+  padding: 22px 26px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: 26px;
+}
+
+.filter-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter-title {
+  font-size: 17.5px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 3px;
+}
+
+.filter-subtitle {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.unit-indicator {
+  font-size: 12.5px;
+  color: #15803d;
+  background: #f0fdf4;
+  border: 1px solid #dcfce7;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.filter-controls-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr auto;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-group label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.filter-select,
+.filter-input {
+  width: 100%;
+  height: 42px;
+  padding: 8px 12px;
+  background: #f9fafb;
+  border: 1.5px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  font-size: 13.5px;
+  color: #111827;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.filter-select:focus,
+.filter-input:focus {
+  background: #ffffff;
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
+}
+
+.reset-filter-btn {
+  height: 42px;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  padding: 0 16px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.reset-filter-btn:hover {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+/* =========================================================
+   Price Overview Cards Grid
+   ========================================================= */
+.overview-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.overview-stat-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.overview-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: #86efac;
+}
+
+.stat-icon-bubble {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.bubble-green { background: #f0fdf4; border: 1px solid #dcfce7; }
+.bubble-teal { background: #f0fdfa; border: 1px solid #ccfbf1; }
+.bubble-rose { background: #fff1f2; border: 1px solid #ffe4e6; }
+.bubble-amber { background: #fffbeb; border: 1px solid #fef3c7; }
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-label {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.stat-number {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.1;
+}
+
+.text-teal { color: #0f766e; }
+.text-rose { color: #be123c; }
+.text-amber { color: #b45309; }
+
+.stat-note {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+/* =========================================================
+   Visual Comparison Bar Chart Section
+   ========================================================= */
+.comparison-visual-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  margin-bottom: 28px;
+}
+
+.comparison-head-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.section-mini-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #15803d;
+  background: #dcfce7;
+  padding: 2px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 6px;
+}
+
+.comparison-title {
+  font-size: 18.5px;
+  font-weight: 800;
+  color: #14532d;
+  margin: 0 0 4px;
+}
+
+.comparison-sub {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.comparison-select-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comparison-select-box label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.comparison-select {
+  background: #f9fafb;
+  border: 1.5px solid #d1d5db;
+  border-radius: var(--radius-md);
+  padding: 6px 12px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #14532d;
+  cursor: pointer;
+  outline: none;
+}
+
+.comparison-select:focus {
+  border-color: #16a34a;
+}
+
+.bars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 210px 1fr 110px;
+  align-items: center;
+  gap: 16px;
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+}
+
+.bar-label-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bar-market-name {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.bar-range-text {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.bar-visual-track {
+  width: 100%;
+  height: 26px;
+  background: #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #16a34a 0%, #15803d 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  transition: width 0.4s ease;
+  min-width: 65px;
+}
+
+.bar-fill-text {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.bar-value-pill {
+  text-align: right;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 2px;
+}
+
+.bar-value-pill strong {
+  font-size: 16px;
+  color: #15803d;
+}
+
+.bar-unit {
+  font-size: 11.5px;
+  color: #6b7280;
+}
+
+/* =========================================================
+   Market Price Comparison Table Section
+   ========================================================= */
+.table-section {
+  margin-bottom: 30px;
+}
+
+.table-head-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.table-section-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #14532d;
+  margin: 0 0 4px;
+}
+
+.table-section-sub {
+  font-size: 13.5px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.table-count-badge {
+  font-size: 12px;
+  font-weight: 600;
+  color: #15803d;
+  background: #dcfce7;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.table-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.table-scroll-wrapper {
+  overflow-x: auto;
+}
+
+.market-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13.5px;
+}
+
+.market-table th {
+  background: #f9fafb;
+  padding: 14px 18px;
+  font-weight: 700;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.market-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #f3f4f6;
+  color: #1f2937;
+}
+
+.market-table tr:hover {
+  background: #fbfdfb;
+}
+
+.crop-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.crop-cell-icon {
+  font-size: 20px;
+}
+
+.crop-cell-name {
+  font-size: 14px;
+  color: #111827;
+}
+
+.market-location-tag {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.price-tag {
+  font-size: 13.5px;
+}
+
+.min-price {
+  color: #0f766e;
+}
+
+.max-price {
+  color: #b45309;
+}
+
+.modal-price {
+  color: #15803d;
+  font-size: 14.5px;
+}
+
+.date-tag {
+  font-size: 12.5px;
+  color: #6b7280;
+}
+
+.table-footer-legend {
+  background: #fafafa;
+  padding: 12px 18px;
+  border-top: 1px solid #f3f4f6;
+  font-size: 12px;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* Empty State */
+.no-results-box {
+  padding: 48px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.no-results-icon {
+  font-size: 42px;
+}
+
+.no-results-box h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.no-results-box p {
+  font-size: 13.5px;
+  color: #6b7280;
+  max-width: 520px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* =========================================================
+   SECTION 6: Farmer Tips Section
+   ========================================================= */
+.farmer-tips-section {
+  margin-bottom: 24px;
+}
+
+.tips-head-bar {
+  margin-bottom: 16px;
+}
+
+.tips-heading {
+  font-size: 20px;
+  font-weight: 800;
+  color: #14532d;
+  margin: 0 0 4px;
+}
+
+.tips-subheading {
+  font-size: 13.5px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.tip-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-2px);
+  border-color: #86efac;
+}
+
+.tip-icon {
+  font-size: 26px;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+.tip-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tip-card h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #14532d;
+  margin: 0;
+}
+
+.tip-card p {
+  font-size: 12.5px;
+  color: #4b5563;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* =========================================================
+   Responsive Adjustments
+   ========================================================= */
+@media (max-width: 960px) {
+  .filter-controls-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bar-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .bar-value-pill {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .market-main-content {
+    padding: 20px 16px;
+  }
+
+  .market-header {
+    flex-direction: column;
+  }
+
+  .filter-controls-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,630 @@
+/* =========================================================
+   FarmHelper Irrigation Page Styles (Agricultural Green Theme)
+   ========================================================= */
+
+.irrigation-page-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f7faf8;
+}
+
+.irrigation-main-content {
+  flex: 1;
+  padding: 32px 36px;
+  overflow-y: auto;
+  max-width: 1440px;
+}
+
+/* =========================================================
+   Header Section
+   ========================================================= */
+.irrigation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header-text-group {
+  max-width: 680px;
+}
+
+.irrigation-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0f766e;
+  background: #ccfbf1;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.irrigation-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #14532d;
+  letter-spacing: -0.6px;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.irrigation-subtitle {
+  font-size: 14.5px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.irrigation-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.field-dropdown {
+  background: #ffffff;
+  border: 1.5px solid #d1d5db;
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #1f2937;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.field-dropdown:focus {
+  border-color: #0f766e;
+}
+
+.check-recommendation-btn {
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  color: #ffffff;
+  border: none;
+  padding: 9px 16px;
+  border-radius: var(--radius-md);
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(13, 148, 136, 0.25);
+  transition: all 0.2s ease;
+}
+
+.check-recommendation-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+  box-shadow: 0 6px 14px rgba(13, 148, 136, 0.35);
+  transform: translateY(-1px);
+}
+
+.check-recommendation-btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+/* Status Banner */
+.irrigation-status-banner {
+  background: #f0fdfa;
+  border: 1px solid #ccfbf1;
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 26px;
+  font-size: 13px;
+  color: #115e59;
+  flex-wrap: wrap;
+}
+
+.banner-icon {
+  font-size: 16px;
+}
+
+.banner-text {
+  flex: 1;
+  font-weight: 500;
+}
+
+.banner-time {
+  font-size: 12px;
+  color: #0f766e;
+  font-weight: 600;
+}
+
+/* =========================================================
+   Top Grid: Current Field Status & Recommendation Card
+   ========================================================= */
+.irrigation-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.field-status-card,
+.recommendation-hero-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card-top-header {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  position: relative;
+}
+
+.sub-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #0f766e;
+  background: #ccfbf1;
+  padding: 2px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  width: fit-content;
+}
+
+.sub-badge.badge-green {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.card-top-header h2 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.selected-field-name {
+  font-size: 12.5px;
+  color: #6b7280;
+}
+
+.status-flag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.flag-active {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+/* Moisture Meter Box */
+.moisture-meter-box {
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  border-radius: var(--radius-md);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.moisture-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meter-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.meter-val {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.meter-track {
+  width: 100%;
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #0d9488 100%);
+  border-radius: 6px;
+  transition: width 0.4s ease;
+}
+
+.meter-scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.target-zone {
+  color: #0f766e;
+  font-weight: 600;
+}
+
+/* Supporting Status Metrics */
+.status-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.status-item {
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.item-icon {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.item-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.item-value {
+  font-size: 13.5px;
+  color: #111827;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Recommendation Hero Card Specifics */
+.recommendation-hero-card {
+  border-color: #99f6e4;
+  background: linear-gradient(180deg, #ffffff 0%, #fafefe 100%);
+}
+
+.recommendation-highlight-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f0fdfa;
+  border: 1.5px solid #ccfbf1;
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+}
+
+.rec-icon-circle {
+  font-size: 36px;
+  width: 58px;
+  height: 58px;
+  background: #ffffff;
+  border: 1.5px solid #99f6e4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(13, 148, 136, 0.15);
+  flex-shrink: 0;
+}
+
+.rec-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.rec-status-heading {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0f766e;
+  text-transform: uppercase;
+}
+
+.rec-main-decision {
+  font-size: 20px;
+  font-weight: 800;
+  color: #134e4a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.rec-timing-badge {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #0d9488;
+  margin-top: 2px;
+}
+
+/* Rec Metrics Row */
+.rec-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.rec-metric-pill {
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.r-label {
+  font-size: 11px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.r-value {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Explanation Box */
+.recommendation-explanation-box {
+  background: #f0fdf4;
+  border: 1px solid #dcfce7;
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.recommendation-explanation-box h4 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #14532d;
+  margin: 0 0 4px;
+}
+
+.recommendation-explanation-box p {
+  font-size: 13px;
+  color: #166534;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* =========================================================
+   3. Schedule Table Section
+   ========================================================= */
+.schedule-section {
+  margin-bottom: 30px;
+}
+
+.section-head-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #14532d;
+  margin: 0 0 4px;
+}
+
+.section-subtitle {
+  font-size: 13.5px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.sample-tag {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.schedule-table-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.schedule-table-wrapper {
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13.5px;
+}
+
+.schedule-table th {
+  background: #f9fafb;
+  padding: 14px 18px;
+  font-weight: 700;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.schedule-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #f3f4f6;
+  color: #1f2937;
+}
+
+.schedule-table tr:last-child td {
+  border-bottom: none;
+}
+
+.schedule-table tr.row-highlight {
+  background: #f0fdf4;
+}
+
+.table-day {
+  display: block;
+  font-size: 14px;
+  color: #111827;
+}
+
+.table-date {
+  font-size: 11.5px;
+  color: #9ca3af;
+}
+
+.table-time {
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.table-amount {
+  color: #0f766e;
+}
+
+.table-method {
+  font-size: 12.5px;
+  color: #6b7280;
+}
+
+/* Status Badges */
+.schedule-status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-scheduled {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.status-upcoming {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.status-paused {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+/* =========================================================
+   4. Farming Tips Section
+   ========================================================= */
+.farming-tips-section {
+  margin-bottom: 24px;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.tip-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-2px);
+  border-color: #86efac;
+}
+
+.tip-card-icon {
+  font-size: 26px;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+.tip-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tip-card-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #14532d;
+  margin: 0;
+}
+
+.tip-card-desc {
+  font-size: 12.5px;
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* =========================================================
+   Responsive Adjustments
+   ========================================================= */
+@media (max-width: 1024px) {
+  .irrigation-overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .irrigation-main-content {
+    padding: 20px 16px;
+  }
+
+  .irrigation-header {
+    flex-direction: column;
+  }
+
+  .rec-metrics-row {
+    grid-template-columns: 1fr;
+  }
+
+  .status-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}

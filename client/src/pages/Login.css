@@ -1,0 +1,529 @@
+/* =========================================================
+   FarmHelper Login Page Styling (Figma Agricultural Theme)
+   ========================================================= */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8f3 40%, #e0f2e9 100%);
+  padding: 24px;
+}
+
+/* Main Split Card */
+.login-card-container {
+  display: flex;
+  width: 100%;
+  max-width: 980px;
+  min-height: 580px;
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 45px -10px rgba(21, 128, 61, 0.18),
+              0 8px 20px -6px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  border: 1px solid rgba(187, 247, 208, 0.6);
+}
+
+/* =========================================================
+   LEFT PANEL: Agriculture Introductory Section
+   ========================================================= */
+.login-intro-panel {
+  flex: 1.1;
+  background: linear-gradient(155deg, #14532d 0%, #15803d 50%, #166534 100%);
+  color: #ffffff;
+  padding: 44px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ambient leaf/agricultural glow effect in background */
+.login-intro-panel::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(74, 222, 128, 0.22) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+/* Brand Header */
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-logo-circle {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #86efac;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.brand-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.brand-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.brand-tagline {
+  font-size: 13px;
+  color: #bbf7d0;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* Intro Body */
+.intro-body {
+  margin: 28px 0 20px 0;
+}
+
+.pill-badge {
+  display: inline-block;
+  background: rgba(187, 247, 208, 0.2);
+  color: #dcfce7;
+  border: 1px solid rgba(187, 247, 208, 0.35);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-bottom: 12px;
+}
+
+.intro-body h2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.intro-body p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #dcfce7;
+  opacity: 0.95;
+}
+
+/* Feature Highlights */
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.feature-item:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateX(4px);
+}
+
+.feature-icon {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.feature-item strong {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.feature-item p {
+  font-size: 12px;
+  color: #bbf7d0;
+  margin: 0;
+}
+
+/* Intro Footer */
+.intro-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.trust-avatars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.trust-avatars .avatar {
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 4px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.trust-text {
+  font-size: 12px;
+  color: #dcfce7;
+  font-weight: 500;
+}
+
+/* =========================================================
+   RIGHT PANEL: Login Form
+   ========================================================= */
+.login-form-panel {
+  flex: 1;
+  background: #ffffff;
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-content {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+/* Mobile brand header (hidden on desktop) */
+.mobile-brand-header {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: var(--primary-700);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.mobile-logo-circle {
+  width: 36px;
+  height: 36px;
+  background: var(--primary-100);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-700);
+}
+
+.form-header {
+  margin-bottom: 22px;
+}
+
+.welcome-heading {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.4px;
+  margin-bottom: 6px;
+}
+
+.welcome-subtext {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.45;
+}
+
+/* Status Banner */
+.status-banner {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.status-success {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.status-info {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+/* Input Fields */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.input-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-control {
+  width: 100%;
+  height: 44px;
+  padding: 10px 14px;
+  background: #f9fafb;
+  border: 1.5px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  color: #111827;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.input-control.has-left-icon {
+  padding-left: 40px;
+}
+
+.input-control.has-right-action {
+  padding-right: 40px;
+}
+
+.input-control:focus {
+  background: #ffffff;
+  border-color: var(--primary-600);
+  box-shadow: 0 0 0 3.5px rgba(22, 163, 74, 0.15);
+}
+
+.input-control::placeholder {
+  color: #9ca3af;
+  font-size: 13.5px;
+}
+
+.input-icon.left-icon {
+  position: absolute;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.input-right-action {
+  position: absolute;
+  right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.password-toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 6px;
+  color: #6b7280;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease;
+}
+
+.password-toggle-btn:hover {
+  color: var(--primary-700);
+}
+
+/* Remember Me & Forgot Password */
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-top: -2px;
+}
+
+.remember-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4b5563;
+  cursor: pointer;
+  user-select: none;
+}
+
+.remember-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary-600);
+  cursor: pointer;
+}
+
+.forgot-password-link {
+  color: var(--primary-700);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.forgot-password-link:hover {
+  color: var(--primary-800);
+  text-decoration: underline;
+}
+
+/* Login Submit Button */
+.login-submit-btn {
+  height: 46px;
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(22, 128, 61, 0.3);
+  transition: all 0.2s ease;
+  margin-top: 6px;
+}
+
+.login-submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+  box-shadow: 0 6px 16px rgba(22, 128, 61, 0.4);
+  transform: translateY(-1px);
+}
+
+.login-submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.login-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Demo account fill button */
+.demo-account-btn {
+  background: #f0fdf4;
+  color: var(--primary-700);
+  border: 1px dashed var(--primary-500);
+  height: 38px;
+  border-radius: var(--radius-md);
+  font-size: 12.5px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.demo-account-btn:hover {
+  background: #dcfce7;
+  border-color: var(--primary-700);
+}
+
+/* Sign Up Footer */
+.signup-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 13.5px;
+  color: #6b7280;
+}
+
+.signup-link {
+  color: var(--primary-700);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  color: var(--primary-800);
+  text-decoration: underline;
+}
+
+/* =========================================================
+   RESPONSIVE LAYOUT (Mobile & Tablets)
+   ========================================================= */
+@media (max-width: 860px) {
+  .login-card-container {
+    flex-direction: column;
+    max-width: 480px;
+  }
+
+  .login-intro-panel {
+    display: none; /* Hide left panel on smaller screens, mobile brand takes over */
+  }
+
+  .mobile-brand-header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .login-form-panel {
+    padding: 36px 26px;
+  }
+
+  .welcome-heading {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .welcome-subtext {
+    text-align: center;
+  }
+}

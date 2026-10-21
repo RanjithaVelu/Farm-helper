@@ -1,0 +1,13 @@
+{
+  "name": "farm-helper",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FarmHelper - Smart Farming Assistant (MERN)",
+  "scripts": {
+    "dev": "npm --prefix client run dev",
+    "client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "server": "npm --prefix server start",
+    "server:dev": "npm --prefix server run dev"
+  }
+}

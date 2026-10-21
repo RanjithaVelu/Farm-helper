@@ -1,0 +1,268 @@
+/* =========================================================
+   Sidebar Styling (FarmHelper Agriculture Theme)
+   ========================================================= */
+
+/* Desktop Sidebar */
+.sidebar-container {
+  width: 260px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Brand / Header */
+.sidebar-brand {
+  padding: 24px 20px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.sidebar-logo-icon {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(22, 163, 74, 0.25);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-brand .brand-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #14532d;
+  letter-spacing: -0.4px;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.sidebar-brand .brand-badge {
+  font-size: 11.5px;
+  color: #16a34a;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-top: 2px;
+}
+
+/* Nav Menu */
+.sidebar-nav {
+  flex: 1;
+  padding: 20px 14px;
+  overflow-y: auto;
+}
+
+.nav-section-title {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #9ca3af;
+  letter-spacing: 0.8px;
+  padding: 0 10px 10px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background: #f0fdf4;
+  color: #15803d;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  background: #dcfce7;
+  color: #14532d;
+  font-weight: 600;
+  box-shadow: inset 3px 0 0 #16a34a;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+.nav-link.active .nav-icon {
+  color: #15803d;
+}
+
+.nav-label {
+  white-space: nowrap;
+}
+
+/* Footer Section */
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid #f3f4f6;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.farmer-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.farmer-avatar {
+  font-size: 20px;
+  width: 34px;
+  height: 34px;
+  background: #e8f5e9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.farmer-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.farmer-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.2;
+}
+
+.farmer-role {
+  font-size: 11px;
+  color: #16a34a;
+  font-weight: 500;
+}
+
+.logout-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border: 1px solid #fee2e2;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: #fef2f2;
+  border-color: #fca5a5;
+  color: #b91c1c;
+}
+
+/* Mobile Header & Backdrop */
+.mobile-header {
+  display: none;
+  background: #ffffff;
+  padding: 14px 18px;
+  border-bottom: 1px solid #e5e7eb;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 101;
+}
+
+.mobile-header-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #15803d;
+}
+
+.mobile-menu-toggle {
+  background: transparent;
+  border: none;
+  padding: 4px;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sidebar-backdrop {
+  display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .mobile-header {
+    display: flex;
+  }
+
+  .sidebar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar-container.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 99;
+  }
+}
